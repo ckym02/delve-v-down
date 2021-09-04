@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  app:
+    build: .
+    environment:
+      TZ: Asia/Tokyo
+    volumes:
+      - .:/kokoko
+    ports:
+      - 8089:8089
+volumes:
+  link-AG-db:
+    driver: local
