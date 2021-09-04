@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 
 # freshのインストール
 RUN go get github.com/pilu/fresh
-RUN go get github.com/go-delve/delve/cmd/dlv
+RUN go get github.com/go-delve/delve/cmd/dlv@v1.3.0
 
 CMD fresh
 
