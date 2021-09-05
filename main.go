@@ -44,7 +44,9 @@ func Index(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	// 外部パラメータをJSON形式で取得
 	paramsJson := SetPatrameters(r)
 
-	fmt.Print(paramsJson)
+  // 確認のためにbyteをstringにキャストする
+	fmt.Print(string(paramsJson))
+
 	// UserAgent判定
 	// url := banner.Url
 
