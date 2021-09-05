@@ -6,7 +6,7 @@ import (
 
 	"net/http"
 	"encoding/json"
-	"github.com/braintree/manners"
+	_"github.com/braintree/manners"
 	"github.com/julienschmidt/httprouter"
 )
 
@@ -79,5 +79,8 @@ func main() {
 	// router.GET("/click/:media_code/:banner_sym/", handle.Click)
 
 	// handleSignal()
-	manners.Serve(listener, router)
+	fmt.Print(listener)
+	fmt.Print("ああああ")
+	fmt.Print(router)
+	// manners.Serve(listener, router)
 }
