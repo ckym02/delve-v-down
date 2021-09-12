@@ -9,6 +9,11 @@ services:
       - .:/kokoko
     ports:
       - 8089:8089
+      - 12345:12345
+    security_opt:
+      - apparmor:unconfined
+    cap_add:
+      - SYS_PTRACE
 volumes:
   link-AG-db:
     driver: local
