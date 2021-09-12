@@ -68,8 +68,7 @@ func Index(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 func main() {
 
 	var listener net.Listener
-	// listener, err := net.Listen("tcp", fmt.Sprintf(":%d", 8089))
-	listener, err := net.Listen("tcp", ":8089")
+	listener, err := net.Listen("tcp", fmt.Sprintf(":%d", 8089))
 	if err != nil {
 		// logger.Error("Failed to start server", zap.String("status", err.Error()))
 	}
@@ -80,12 +79,5 @@ func main() {
 	// router.GET("/click/:media_code/:banner_sym/", handle.Click)
 
 	// handleSignal()
-	// fmt.Print(listener)
-	// fmt.Print("ああああ")
-	// fmt.Print(router)
-	if listener == nil {
-		fmt.Print("あたり")
-	}
-
 	manners.Serve(listener, router)
 }
